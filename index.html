@@ -1,0 +1,472 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>wnetrza</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width">
+  <script>
+    function _(id) { retun document.getElementById(id); }
+    function submitForm() {
+      _("mybtn").disabled = true;
+      _("status").innerHTML = 'please wait ...';
+      var formdata = new FormData();
+      formdata.append( "n",  _("n").value );
+      formdata.append( "e",  _("e").value );
+      formdata.append( "m",  _("m").value );
+      var ajax = new XMLHttpRequest();
+      ajax.open( "POST", "example_parser.php" );
+      ajax.onreadystatechange = function() {
+        if(ajax.readyState == 4 && ajax.status == 200) {
+          if(ajax.responseText == "success") {
+            _("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+          } else {
+            _("status").innerHTML = ajax.responseText;
+            _("mybtn").disabled = false;
+          }
+        }
+      }
+      ajax.send( formdata );
+    }
+  }
+</script>
+</head>
+<body>
+
+	<header>
+  <i class="fa fa-bars toggle_menu" aria-hidden="true"></i>
+    <div class="sidebar_menu">
+<i class="fa fa-times" aria-hidden="true"></i>
+  
+  <ul class="navigation_selection">
+    <li class="navigation_item"><a href="#głowna">Strona główna</a></li>
+    <li class="navigation_item"><a href="#Onas">O nas</a></li>
+    <li class="navigation_item"><a href="#Oferta">Oferta</a></li>
+    <li class="navigation_item"><a href="#Portfolio">Portfolio</a></li>
+    <li class="navigation_item"><a href="#dodatkowe">Dodatkowe usługi</a></li>
+    <li class="navigation_item"><a href="#pracownicy">Nasi pracownicy</a></li>
+    <li class="navigation_item"><a href="#Partnerzy">Partnerzy</a></li>
+    <li class="navigation_item"><a href="#Osiagniecia">Osiągnięcia</a></li>
+    <li class="navigation_item"><a href="#kontakt">Kontakt</a></li>
+
+  </ul>
+  
+  </div>
+
+       
+    <h1 id="głowna">Tworzymy<br> dobrą energię przestrzeni</h1>
+  </header>
+  <div id="Onas">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12">
+        <h1>KILKA SŁÓW O NAS</h1>
+        <p>Poznaj nasze podejście</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-m-6 col-s-12 intro2">
+        <p>Nasza przygoda z projektowaniem wnętrz i niezmienna miłość do pięknych aranżacji, ma swoje początki w roku 2005, kiedyt to przyjaźń przerodziła się we wspaniałą współpracę zawodową, która trwa owocnie po dzisiejszy dzień.<br>Dzięki wspólnej wizji, niezmiennej pasji oraz zamiłowaniu do kreacji nietuzinkowych wnętrz, stworzyliśmy wyjątkową firmę, która kładzie główny nacisk na zadowolenie naszych klientów, zarówno we współpracy z nami, jak i z najważniejszego, czyli efektu końcowego realizowanych projektów.</p>
+      </div>
+      <div class="col-6 col-m-6 col-s-12 intro2">
+        <p>Dla nas ważne jest stworzenie przestrzeni, która będzie odzwierciedlała osobisty charakter naszych Klientów, będzie spełniała ich oczekiwania w najdrobniejszych detalach. Wiemy, że dycydując się na współpracę z projektantem wnętrz, Nasi klienci oczekują wnętrz wyjątkowych, które zachwycą ale również w niespotykany sposób przedstawią indywidualny charakter naszych Klientów. Wspaniałą nagrodą jest dla nas moment, gdy po czasie spędzonym w swoim nowym domu, otrzymujemy pozytywne zwrotne opinie, opisujące reakcje zadowolenia z naszej wspólnej współpracy.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-pencil fa-3x" aria-hidden="true"></i>
+          <p>12 LAT DOŚWIADCZENIA</p>
+        </div>
+      </div>
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-trophy fa-3x" aria-hidden="true"></i>
+          <p>DYPLOMY RENOMOWANYCH UCZELNI</p>
+        </div>
+      </div>
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-heart-o fa-3x" aria-hidden="true"></i>
+          <p>PROJEKTOWANIE TO NASZA PASJA</p>
+        </div>
+      </div>
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-laptop fa-3x" aria-hidden="true"></i>
+          <p>PRACUJEMY NA LICENCJONOWANYM OPROGRAMOWANIU</p>
+        </div>
+      </div>
+    
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-money fa-3x" aria-hidden="true"></i>
+          <p>SZANUJEMY ZDANIE, CZAS I PIENIĄDZE INWESTORA</p>
+        </div>
+      </div>
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-cogs fa-3x" aria-hidden="true"></i>
+          <p>SZEROKA BAZA SPRAWDZONYCH WYKONAWCÓW</p>
+        </div>
+      </div>
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-car fa-3x" aria-hidden="true"></i>
+          <p>GŁÓWNA SIEDZIBA W CENTRUM WARSZAWY Z DOSTĘPEM DO ŚWIETNEGO SHOWROOMU</p>
+        </div>
+      </div>
+      <div class="col-3 col-m-3 col-s-6">
+        <div class="ikony">
+          <i class="fa fa-calendar-check-o fa-3x" aria-hidden="true"></i>
+          <p>DOTRZYMUJEMY TERMINÓW</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="Oferta">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12">
+        <h1>OFERTA</h1>
+        <p>Zobacz więcej</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-m-6 col-s-12 oferta0">
+        <div class="oferta1">
+          <h2>Oferta dla Klientów Indywidualnych</h2>
+          <ul>
+            <li>Przygotowanie kompleksowego projektu aranżacji wnętrza, rozpoczyna się od wykonania inwentaryzacji wnętrza (wykonanie rzeczywistego pomiaru pomieszczeń).</li>
+            <li>Następnie na bazie wykonanych wymiarów, przygotowany jest projekt koncepcji funkcjonalnej 2D (koncepcja zagospodarowania przestrzennego). </li>
+            <li>W nastęnej kolejności, po wyborze jednej z opcji układu funkcjonalnego, przystępujemy do wykonania projektów wizualizacji 3D (wizualizacje fotorealistyczne).</li>
+            <li>Prace nad każdym z wyżej wymienionych etapów, trwają do momentu pełnej akceptacji Klienta.</li>
+            <li>W następnej kolejności po zaakceptowaniu wizualizacji, przygotowujemy specyfikację techniczną dla podwykonawców oraz spis sugerowanych materiałów. </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-6 col-m-6 col-s-12 oferta0">
+        <div class="oferta1">
+          <h2>Oferta dla Klientów Komercyjnych</h2>
+          <ul>
+            <li>koncepcja funkcjonalna</li>
+            <li>wizualizacje wnętrz</li>
+            <li>kompleksowa obsługa obejmująca aranżację wnętrza oraz prace remontowo-wykończeniowe</li>
+            <li>home-staging - przygotowanie mieszkań/domów do sprzedaży lub wynajmu</li>
+            <li>projektowanie apartamentów pokazowych</li>
+            <li>wsparcie podczas dni otwartych</li>
+            <li>doradztwo/konsultacja dla Klientów biura</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="Portfolio">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12 odstep">
+        <h1>PORTFOLIO</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 gallery col-m-6 col-s-12">
+        <div class="gallery gallery1">
+          <div class="layer">
+            <p>Apartamenty w Salvator Tower</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery2">
+          <div class="layer">
+            <p>Mieszkanie w Garden Residence</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery3">
+          <div class="layer">
+            <p>Dom Planty Śląskie</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery4">
+          <div class="layer">
+            <p>Apartament na Masarskiej</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery5">
+          <div class="layer">
+            <p>Apartament 8 piętro</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery6">
+          <div class="layer">
+            <p>Chicken Club</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery7">
+          <div class="layer">
+            <p>Dom w zieleni</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery8">
+          <div class="layer">
+            <p>Apartament z antresolą</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery9">
+          <div class="layer">
+            <p>Loft Wolbrom</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery10">
+          <div class="layer">
+            <p>Apartament Królicza</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery11">
+          <div class="layer">
+            <p>Mieszkanie w Oxford Residence</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 gallery col-s-12 col-m-6">
+        <div class="gallery gallery12">
+          <div class="layer">
+            <p>Dom w Pomiechówku</p><a class="layer" href="#">Pokaż</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12">
+        <a href=""><button id="gal">Zobacz więcej</button></a>
+      </div>
+    </div>
+  </div>
+  <div id="dodatkowe">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12">
+        <h1>DODATKOWE USŁUGI</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-m-4 col-s-12 dodatkowe1">
+        <h2>Oferujemy:</h2>
+        <h4>Konsultacja</h4>
+        <p>Spotkanie mające na celu doradztwo w zakresie funkcjonalności wnętrza, proponowanej kolorystyki w pomieszczeniach, stylistyki mebli, detali dekoracyjnych oraz innych niestandardowych rozwiązań.</p>
+        <h4>Nadzór autorski</h4>
+        <p>Możecie Państwo skorzystać również z opcji nadzoru autorskiego, który polega na koordynacji oraz nadzorze prac remontowych. Dzięki takiej współpracy macie Państwo pewność, że projekt będzie zgodny z pierwotnym zamysłem.</p>
+        <h4>Wizualizacja</h4>
+        <p>Ta opcja współpracy obejmuje przygotowanie wizualizacji 3D w oparciu o otrzymane rzuty architektoniczne wnętrza oraz ewentualnych wskazówek dotyczących aranżacji pomieszczeń.</p>
+        <h4>Opcja "pod klucz"</h4>
+        <p>Wybierając tę formę współpracy odciążymy Państwa przy zakupach wystroju wnętrz, dostawach czy konieczności obecności podczas montażu elementów wystroju wnętrz.</p>
+      </div>
+      <div class="col-4 col-m-4 col-s-12 dodatkowe1">
+        <h2>Home Staging</h2>
+        <h4>Z nami będzie łatwiej</h4>
+        <p>Usługę home staging dedykujemy tym osobom, którym zależy na profesjonalnym przygotowaniu ich domu lub mieszkania do sprzedaży lub wynajmu. Nasza gruntowna wiedza oraz sprawdzone techniki home staging pomagają uatrakcyjnić i wyróżnić ofertę Klienta, a także sprawić, że jest ona konkurencyjna na tle innych ofert na rynku. <br>Przy niewielkim nakładzie finansowym, wnętrza, które przygotowujemy do sprzedaży lub wynajmu zyskują nowy wygląd i nabierają charakteru, a dzięki temu rośnie zainteresowanie nimi u potencjalnych nabywców. Przede wszystkim jednak, wzrasta ich wartość rynkowa, skraca się czas sprzedaży lub wynajmu, a to zdecydowanie gwarantuje korzystny efekt finansowy dla Klienta. <br> W ramach współpracy home stagingowej proponujemy konsultację lub usługę kompleksową.</p>
+        <h4>Współpraca "on-line"</h4>
+        <p>Jeśli nasza współpraca nie może przebiegać osobiście oferujemy Państwu wygodną formę współpracy on-line, która opiera się na kontakcie telefonicznym, e-mail lub przez dostępne komunikatory np.Skype.</p>
+      </div>
+      <div class="col-4 col-m-4 col-s-12 dodatkowe1">
+        <h2>Usługa remontowa</h2>
+        <h4>Wiedza procentuje</h4>
+        <p>Z doświadczenia wiemy, że na początku drogi zmierzającej do zamieszkania w własnych czterech kątach, macie Państwo wiele pytań, wątpliwości oraz obaw. Często sam wybór niesprawdzonej ekipy remontowej, może budzić wiele niepokoju. Dlatego też, i na tym etapie chcemy Państwu pomóc, dzieląc się z Państwem swoim doświadczeniem. Z nami te wszystkie wątpliwości zostaną rozwiane, ponieważ dzięki poleceniu współpracujących z nami od wielu lat firmami remontowymi, otrzymacie Państwo profesjonalizm oraz zadowolenie, które jest bezcenne. Oferujemy dwa typu usług:<br></p>
+        <h4>Usługa remontowa z nadzorem autorskim</h4>
+        <p>kompleksowe prace remontowo-wykończeniowe</p>
+        <p>nadzór i koordynacja prac remontowo-wykończeniowych</p>
+        <h4>Usługa remontowa bez nadzoru autorskiego</h4>
+        <p>kompleksowe prace remontowo-wykończeniowe</p>
+        <p>odbiory techniczne mieszkań</p>
+      </div>
+    </div>
+  </div>
+  <div id="pracownicy">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12 pracownicy1">
+        <h1>NASI PRACOWNICY</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 team col-m-6 col-s-6 miejsce">
+        <div class="team team1">
+          <div class="layer2">
+            <p>Projektant</p>
+          </div>
+          <p class="podpis">Adrianna Kożuchowska</p>
+        </div>
+      </div>
+      <div class="col-3 team col-m-6 col-s-6 miejsce">
+        <div class="team team2">
+          <div class="layer2">
+            <p>Dekorator</p>
+          </div>
+          <p class="podpis">Julia Romanowska</p>
+        </div>
+      </div>
+      <div class="col-3 team col-m-6 col-s-6 miejsce">
+        <div class="team team3">
+          <div class="layer2">
+            <p>Grafik</p>
+          </div>
+          <p class="podpis">Krystyna Wojciechowska</p>
+        </div>
+      </div>
+      <div class="col-3 team col-m-6 col-s-6 miejsce">
+        <div class="team team4">
+          <div class="layer2">
+            <p>Plastyk</p>
+          </div>
+          <p class="podpis">Zuzanna Jesienna</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="Partnerzy">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12 odstep">
+        <h1>Partnerzy</h1>
+        <h4>Firmy które polecamy:</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-s-12 col-m-6 part">
+        <img class="motta" src="http://i66.tinypic.com/hurtwy.png">
+        <p>Motta - armatura kuchenna/łazienkowa, ceramika sanitarna, płytki podłogowe/ścienne, centralne ogrzewanie, sprzęt AGD, meble łazienkowe.</p>
+      </div>
+      <div class="col-4 col-s-12 col-m-6 part">
+        <img class="drewbud" src="http://i64.tinypic.com/m747yp.png">
+        <p>Drewbud - podłogi z litego drewna, schody parapety, drzwi wewnętrzne, meble na zamówienie, tarasy z drewna.</p>
+      </div>
+      <div class="col-4 col-s-12 col-m-6 part">
+        <img class="flegrant" src="http://i63.tinypic.com/2ry10zo.png">
+        <p>Flegrant - francuski producent farb, tapet, szerokiego asortymentu do wykańczania powierzchni oraz narzędzi malarskich.</p>
+      </div>
+ 
+      <div class="col-4 col-s-12 col-m-6 part">
+        <img class="superczysto" src="http://i68.tinypic.com/2ui9a3a.png">
+        <p>Superczysto - serwis sprzątający. Sprzątanie gruntowne, poremontowe, po imprezowe, świąteczne, incydentalne i bieżące utrzymanie czystości.</p>
+      </div>
+      <div class="col-4 col-s-12 col-m-6 part">
+        <img class="solidglass" src="http://i66.tinypic.com/icu1qf.png">
+        <p>Solidglass - wykonanie elementów szklanych na indywidualne zamówienie - półki, lustra, ściany działowe, drzwi, kabiny prysznicowe.</p>
+      </div>
+      <div class="col-4 col-s-12 col-m-6 part">
+        <img class="figaro" src="http://i66.tinypic.com/14j9ul0.png">
+        <p>Figaro - projektowanie, instalowanie systemów inteligentnego domu.</p>
+      </div>
+    </div>
+  </div>
+  <div id="Osiagniecia">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12">
+        <h1 id="fakt">KILKA FAKTÓW <br>O NEW AGE DESIGN</h1> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 col-s-6 col-m-4 flip3D">
+        <div class="back">lat<br>doświadczenia
+        </div>
+        <div class="front">12
+        </div>
+      </div>
+      <div class="col-2 col-s-6 col-m-4 flip3D">
+        <div class="back">zrealizowanych<br>projektów
+        </div>
+        <div class="front">428
+        </div>
+      </div>
+      <div class="col-2 col-s-6 col-m-4 flip3D">
+        <div class="back m2">m<sup>2</sup><br>zaprojektowanych<br> wnętrz
+        </div>
+        <div class="front">15.550
+        </div>
+      </div>
+      <div class="col-2 col-s-6 col-m-4 flip3D">
+        <div class="back">miast <br>i wsi
+        </div>
+        <div class="front">37
+        </div>
+      </div>
+      <div class="col-2 col-s-6 col-m-4 flip3D">
+        <div class="back">wyjątkowych<br>realizacji
+        </div>
+        <div class="front">100%
+        </div>
+      </div>
+      <div class="col-2 col-s-6 col-m-4 flip3D">
+        <div class="back">filiżanek<br>kawy
+        </div>
+        <div class="front">18.400
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="kontakt">
+    <div class="row">
+      <div class="col-12 col-m-12 col-s-12 odstep">
+        <h1>ZAPRASZAMY DO KONTAKTU</h1> 
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-m-4 col-s-12 studio">
+        <h1>STUDIO DESIGN</h1>
+        <p class="adres">Adres: 00-950 Warszawa <br>ul. Błotna 5</p>
+        <p class="adres">Telefon:+48 888-887-989</p>
+        <p class="adres">E-mail: design@warszawa.com</p>
+        <i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+        <i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i>
+        <h1 id="formularz">FORMULARZ</h1> 
+        <form id="my_form" onsubmit="submitForm(); return false;">
+          <p><input id="n" placeholder="imię" required></p>
+          <p><input id="e" placeholder="adres email" type="email" required></p>
+          <textarea id="m" placeholder="napisz swoją wiadomość" rows="8" required></textarea>
+          <p><input id="mybtn" type="submit" value="Wyślij"> <span id="status"></span></p>
+        </form>
+      </div>
+      <div class="col-8 col-m-8 col-s-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4887.597504376013!2d21.022091!3d52.228874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471eccf0bf0efebf%3A0xc8707a5f0870639b!2splac+Trzech+Krzy%C5%BCy%2C+Warszawa%2C+Polska!5e0!3m2!1spl!2spl!4v1483352865964" width="750" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>2016 Gedeon</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $(".fa-times").click(function(){
+        $(".sidebar_menu").addClass("hide_menu");
+        $(".toggle_menu").addClass("opacity_one");
+      });
+      $(".toggle_menu").click(function(){
+        $(".sidebar_menu").removeClass("hide_menu");
+        $(".toggle_menu").removeClass("opacity_one");
+      });
+
+
+
+  });
+  
+</script>
+</body>
+</html>

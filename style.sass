@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&subset=latin-ext')
+
+$jasny: #FF69B4
+$ciemny: #662a48
+$najjasniejszy: #ff96ca
+$najciemniejszy: #331524
+
+* 
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: 'Open Sans', sans-serif
+  text-decoration: none
+
+body 
+  color: $ciemny
+  width: 100%
+  margin: auto
+
+.row
+  &:before, &:after
+    content: ""
+    display: table
+    clear: both
+
+[class*="col-"]
+  float: left
+  width: 100%
+
+.fa-bars
+  position: fixed
+  left: 0
+  top: 5%
+  padding: 15px
+  margin-top: 70px
+  color: $najjasniejszy
+  cursor: pointer
+  background-color: $najciemniejszy
+  z-index: 100000
+  font-size: 2em
+  opacity: 0
+
+.sidebar_menu 
+  position: fixed
+  width: 250px
+  margin-left: 0
+  overflow: hidden
+  height: 100vh
+  max-height: 100vh
+  background-color: rgba(255, 225, 240, 0.9)
+  transition: all .5s ease-in-out
+
+.fa-times 
+  right: 10px
+  top: 10px
+  opacity: .5
+  cursor: pointer
+  position: absolute
+  color: $najciemniejszy
+  transition: all .5s ease-in-out
+
+.fa-times:hover
+  opacity: 1
+
+.navigation_selection
+  margin: 20px 0
+  display: block
+  width: 200px
+  margin-left: 25px
+  list-style-type: none
+
+
+.navigation_item
+  font-weight: 200
+  color: $najciemniejszy
+  padding: 12px 0
+  font-size: 14px
+  border-bottom: 1px solid $najciemniejszy
+  transition: all .5s ease-in-out
+  cursor: pointer
+
+
+.hide_menu
+  margin-left: -250px
+
+.opacity_one
+  opacity: 1
+  transition: all .5s ease-in-out
+
+header
+  background: url(header1.png) no-repeat center center
+  background-size: cover
+  text-align: center
+  margin: 0 auto
+  height: 100vh
+
+  h1
+    font-size: 3rem
+    padding-top: 50px
+    font-family: 'Abril Fatface', cursive
+
+#Onas
+  background: url("http://i64.tinypic.com/2uyk68n.png")
+  color: $jasny
+  padding-bottom: 50px
+  padding-top: 50px
+  text-align: center
+
+.intro2
+  padding: 40px 60px
+  p 
+    line-height: 1.8em
+    text-align: justify
+    font-weight: 300
+ 
+.ikony 
+  text-align: center
+
+.fa 
+  padding-bottom: 15px
+  text-align: center
+
+#oferta
+  background: url("http://i64.tinypic.com/i384zr.png")
+  color: $ciemny
+  padding-top: 50px
+  text-align: center
+
+.oferta0 
+  text-align: center
+
+.oferta1
+  padding: 40px 60px
+  line-height: 1.5em
+  text-align: justify
+  h2
+    padding-bottom: 30px
+  ul 
+    line-height: 1.8em
+    padding-left: 20px
+
+#portfolio 
+  padding-top: 50px
+  text-align: center
+  background: url("http://i64.tinypic.com/2uyk68n.png")
+  color: $jasny
+
+.odstep
+  padding-bottom: 20px
+
+.gallery, .gallery1, .gallery2, .gallery3, .gallery4, .gallery5, .gallery6, .gallery7, .gallery8, .gallery9, .gallery10, .gallery11, .gallery12 
+  width: 400px
+  height: 400px
+  background-size: cover
+.gallery:hover .layer, .gallery1:hover .layer, .gallery2:hover .layer, .gallery3:hover .layer, .gallery4:hover .layer, .gallery5:hover .layer, .gallery6:hover .layer, .gallery7:hover .layer, .gallery8:hover .layer, .gallery9:hover .layer, .gallery10:hover .layer, .gallery11:hover .layer, .gallery10:hover .layer 
+  
+  background-color: rgba(255, 225, 240, 0.6)
+  color: $najciemniejszy
+
+.gallery1 
+  background-image: url("http://i67.tinypic.com/20pzgq9.jpg")
+
+.gallery2
+  background-image: url("http://i65.tinypic.com/n36s0l.jpg")
+
+.gallery3
+  background-image: url("http://i65.tinypic.com/n36s0l.jpg")
+
+.gallery4
+  background-image: url("http://i67.tinypic.com/2vn5q3k.jpg")
+
+.gallery5
+  background-image: url("http://i67.tinypic.com/1z1e0ci.jpg")
+
+.gallery6
+  background-image: url("http://i65.tinypic.com/zvodtx.jpg")
+
+.gallery7
+  background-image: url("http://i64.tinypic.com/2n0rgpt.jpg")
+
+.gallery8
+  background-image: url("http://i63.tinypic.com/eqyrzc.jpg")
+
+.gallery9
+  background-image: url("http://i65.tinypic.com/ogdszp.jpg")
+
+.gallery10
+  background-image: url("http://i64.tinypic.com/2lxbvb.jpg")
+
+.gallery11
+  background-image: url("http://i67.tinypic.com/2ld7xie.jpg")
+
+.gallery12
+  background-image: url("http://i65.tinypic.com/2prsqbk.jpg")
+
+.layer 
+  width: 100%
+  height: 100%
+  background: transparent
+  color: transparent
+  padding-top: 100px
+  text-decoration: none
+  text-align: center
+  a
+    padding: 10px
+    border-radius: 5px
+  p
+    margin: 30px
+
+#gal 
+  background: transparent
+  height: 50px
+  margin: 30px
+  padding: 10px 24px
+  width: 250px
+  border: 2px solid $najjasniejszy
+  border-radius: 10px
+  color: $najjasniejszy
+ 
+  &:hover 
+    cursor: pointer
+    background: $najjasniejszy
+    color: $najciemniejszy
+
+#dodatkowe 
+  padding: 50px 0
+  background: url("http://i64.tinypic.com/i384zr.png")
+  text-align: center
+  
+.dodatkowe1 
+  h4 
+    text-align: left
+    padding: 10px 0 10px 40px
+  p 
+    text-align: left
+    padding-right: 40px
+    padding-left: 20px
+    font-weight: 300
+    line-height: 1.5em
+
+#pracownicy 
+  background: url("http://i64.tinypic.com/2uyk68n.png")
+  padding: 50px 0 200px 0
+  color: $jasny
+  text-align: center
+
+.pracownicy1
+  padding-bottom: 50px
+
+
+.podpis 
+  font-size: 1.3rem
+  
+  padding-top: 30px
+  text-align: center
+
+
+.team, .team1, .team2, .team3, .team4 
+  width: 280px
+  height: 280px
+  border-radius: 50%
+  background-size: cover
+.team p, .team1 p, .team2 p, .team3 p, .team4 p 
+  margin: 0
+.team:hover .layer2, .team1:hover .layer2, .team2:hover .layer2, .team3:hover .layer2, .team4:hover .layer2 
+  background-color: rgba(255, 225, 240, 0.6)
+  color: $najciemniejszy
+  font-size: 2rem
+
+.team1
+  background-image: url(t1.png)
+
+.team2 
+  background-image: url(t2.png)
+
+.team3 
+  background-image: url(t3.png)
+
+.team4
+  background-image: url(t4.png)
+
+.layer2
+  width: 100%
+  height: 100%
+  background-color: transparent
+  border-radius: 50%
+  line-height: 280px
+  color: transparent
+  text-align: center
+
+  
+#partnerzy 
+  padding: 50px 0
+  background: url("http://i64.tinypic.com/i384zr.png")
+  text-align: center
+ 
+.superczysto, .figaro, .solidglass, .flegrant, .drewbud, .motta 
+  width: 150px
+  height: 150px
+  padding-bottom: 20px
+  
+.part
+  padding-bottom: 30px
+  
+#Osiagniecia 
+  padding: 50px 0
+  background: url("http://i65.tinypic.com/347txfb.jpg") no-repeat top center
+  background-size: cover
+
+#fakt
+  background-color: rgba(255, 225, 240, 0.6)
+  color: $najciemniejszy
+  text-align: center
+  margin: 100px auto
+  padding: 30px
+  border-radius: 10px
+
+.flip3D
+  width: 200px
+  height: 200px
+ 
+.flip3D > .front
+  position: absolute
+  transform: perspective(600px) rotateY(0deg)
+  background-color: rgba(255, 225, 240, 0.6)
+  color: $najciemniejszy
+  width: 200px
+  height: 200px
+  border-radius: 7px
+  backface-visibility: hidden
+  transition: transform .5s linear 0s
+  text-align: center
+  line-height: 200px
+  font-size: 2.5rem
+  
+.flip3D > .back
+  position: absolute
+  transform: perspective(600px) rotateY(180deg)
+  width: 200px
+  height: 200px
+  border-radius: 7px
+  backface-visibility: hidden
+  transition: transform .5s linear 0s
+  text-align: center
+  padding-top: 70px
+  font-size: 1.3rem
+  background: url("http://i64.tinypic.com/i384zr.png")
+  font-weight: 600
+  color: $najciemniejszy        
+
+.back.m2 
+  padding-top: 50px
+
+.flip3D:hover > .front
+  transform: perspective(600px) rotateY(-180deg)
+
+.flip3D:hover > .back
+  transform: perspective(600px) rotateY(0deg)
+  
+#kontakt 
+  padding: 50px
+  background: url("http://i64.tinypic.com/2uyk68n.png")
+  text-align: center
+  color: $jasny
+
+.studio 
+  padding-top: 0
+
+.adres
+  padding-bottom: 10px
+
+.fa-2x 
+  margin-right: 10px
+  &:hover
+    color: $najciemniejszy
+    cursor: pointer
+
+#formularz 
+  margin: 10px
+
+
+#n, #e, #m, #mybtn
+  padding: 10px 24px
+  width: 300px
+  border: 2px solid $najjasniejszy
+  border-radius: 10px
+  margin-bottom: 2px
+
+#mybtn 
+  background: transparent
+  color: $najjasniejszy
+  &:hover 
+    cursor: pointer
+    background: $najjasniejszy
+    color: $najciemniejszy
+
+iframe
+  width: 100% 
+
+footer 
+  height: 50px
+  line-height: 50px
+  background: url("http://i64.tinypic.com/i384zr.png")
+  color: $ciemny
+  text-align: center
+  font-weight: 600
+
+ 
+.col-1 
+  width: 8.33%
+
+.col-2 
+  width: 16.66%
+
+.col-3 
+  width: 25%
+
+.col-4 
+  width: 33.33%
+   
+.col-5 
+  width: 41.66%
+
+.col-6 
+  width: 50%
+
+.col-7 
+  width: 58.33%
+
+.col-8
+  width: 66.66%
+
+.col-9
+  width: 75%
+
+.col-10
+  width: 83.33%
+
+.col-11
+  width: 91.66%
+
+.col-12
+  width: 100%
+  
+  margin: auto
+
+@media (max-width: 767px) 
+  
+  .gallery:hover .layer, .gallery1:hover .layer, .gallery2:hover .layer, .gallery3:hover .layer, .gallery4:hover .layer, .gallery5:hover .layer, .gallery6:hover .layer, .gallery7:hover .layer, .gallery8:hover .layer, .gallery9:hover .layer, .gallery10:hover .layer
+    display: none
+  .team:hover .layer2, .team1:hover .layer2, .team2:hover .layer2, .team3:hover .layer2, .team4:hover .layer2
+    display: none
+    
+  .gallery, .gallery1, .gallery2, .gallery3, .gallery4, .gallery5, .gallery6, .gallery7, .gallery8, .gallery9, .gallery10
+    width: 100%
+    height: 100vw
+    background-size: cover
+  .team, .team1, .team2, .team3, .team4
+    width: 150px
+    height: 150px
+    border-radius: 50%
+    background-size: cover
+    text-align: center
+    margin-bottom: 70px
+
+  .miejsce
+    margin-bottom: 100px
+  
+  .intro2
+    padding: 20px
+    p 
+      font-size: .9rem
+
+  .ikony 
+    padding-bottom: 30px
+    p 
+      font-size: .9rem
+
+  .oferta1
+    padding: 20px
+    ul
+      font-size: .9rem
+
+  #pracownicy
+    padding-bottom: 80px
+  .flip3D
+    width: 150px
+    height: 150px
+    margin-bottom: 20px
+  .flip3D > .front
+    width: 150px
+    height: 150px
+    line-height: 150px
+  .flip3D > .back
+    width: 150px
+    height: 150px
+    font-size: .9rem
+    padding-top: 55px
+  
+  #n, #e, #m, #mybtn
+    padding: 10px
+    width: 250px
+
+  #kontakt
+    padding: 20px
+
+  iframe
+    height: 400px
+
+  #Osiagniecia
+    padding-left: 20px
+ 
+  .col-s-1 
+    width: 8.33%
+  .col-s-2 
+    width: 16.66%
+  .col-s-3
+    width: 25%
+  .col-s-4
+    width: 33.33%
+  .col-s-5
+    width: 41.66%
+  .col-s-6 
+    width: 50%
+  .col-s-7 
+    width: 58.33%
+  .col-s-8 
+    width: 66.66%
+  .col-s-9 
+    width: 75%
+  .col-s-10 
+    width: 83.33%
+  .col-s-11 
+    width: 91.66%
+  .col-s-12 
+    width: 100%
+
+@media (min-width: 768px) and (max-width: 1200px) 
+  .intro2
+    padding: 30px 40px
+    p 
+      font-size: .9rem
+
+  .oferta1
+    padding: 30px 40px
+    ul
+      font-size: .9rem
+  .team, .team1, .team2, .team3, .team4
+    margin-bottom: 80px
+
+  #pracownicy 
+    padding-bottom: 80px
+
+  .flip3D
+    margin-bottom: 40px
+
+  #Osiagniecia
+    padding-left: 20px
+
+  #kontakt 
+    padding: 50px 20px
+
+  #n, #e, #m, #mybtn
+    width: 200px
+  
+  .col-m-1 
+    width: 8.33%
+  .col-m-2 
+    width: 16.66%
+  .col-m-3 
+    width: 25%
+  .col-m-4 
+    width: 33.33%
+  .col-m-5 
+    width: 41.66%
+  .col-m-6 
+    width: 50%
+  .col-m-7 
+    width: 58.33%
+  .col-m-8 
+    width: 66.66%
+  .col-m-9 
+    width: 75%
+  .col-m-10 
+    width: 83.33%
+  .col-m-11 
+    width: 91.66%
+  .col-m-12 
+    width: 100%
+
+/*# sourceMappingURL=style.css.map */
